@@ -1,1 +1,1 @@
-# gunn-scanner
+# capstone-scanner
