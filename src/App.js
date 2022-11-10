@@ -1,18 +1,16 @@
 import "./App.css";
-import CompList from "./components/compList";
-import Scanner from "./components/scanner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/login";
+import Home from "./pages/home";
 
 function App() {
   return (
-    <div>
-      <h1>Computer Check-in/Check-out System</h1>
-      <div className="App">
-        <div>
-          <CompList />
-          <Scanner />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/ " element={<Login />} />
+        <Route path="home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
