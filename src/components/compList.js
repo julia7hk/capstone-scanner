@@ -1,11 +1,15 @@
+import computer_data from "../computer_data.json";
+
 function CompList() {
-  const students = ["julia", "sara", "sammy"];
-  const listStudents = students.map((student) => <li>{student}</li>);
+  const listComputers = computer_data.map((data, key) => (
+    <div key={key}>{data.id + " , " + data.room + " ," + data.slot}</div>
+  ));
+  console.log(computer_data);
 
   return (
     <div className="border border-red-900 rounded-lg">
       <h1>CompList</h1>
-      <ul>{listStudents}</ul>
+      <div>{listComputers}</div>
     </div>
   );
 }
